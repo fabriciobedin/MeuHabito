@@ -21,7 +21,17 @@
                          'B',
                          ['class'=>'form-control']) !!}
         </div>
+        <div class="form-group">
+            {!! Form::label('objetivo', 'Objetivo:') !!}
+            {!! Form::number('objetivo', 1,['class' =>'form-control']) !!}
+        </div>
 
+        <div class="form-group">
+            {!! Form::label('tp_inicio_ctrl', 'Data:') !!}
+            {!! Form::date('tp_inicio_ctrl',
+                        '2017-05-20 00:00:00',
+                         ['class'=>'form-control']) !!}
+        </div>
 
 
 
