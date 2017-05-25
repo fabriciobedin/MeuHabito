@@ -6,14 +6,25 @@
 
         {!! Form::open() !!}
         <div class="form-group">
-            {!! Form::label('nome', 'Nome') !!}
+            {!! Form::label('nome', 'Nome:') !!}
             {!! Form::text('nome', null,['class' =>'form-control']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('descricao', 'Descrição') !!}
+            {!! Form::label('descricao', 'Descrição:') !!}
             {!! Form::textarea('descricao', null,['class' =>'form-control']) !!}
         </div>
+        <div class="form-group">
+            {!! Form::label('tp_habito', 'Tipo:') !!}
+            {!! Form::select('tp_habito',
+                        array('B' => 'Bom', 'R' => 'Ruim'),
+                         'B',
+                         ['class'=>'form-control']) !!}
+        </div>
+
+
+
+
         {!! Form::close() !!}
     </div>
 @endsection
