@@ -16,4 +16,11 @@ class HabitosController extends Controller
     public function create(){
         return view ('habitos.create');
     }
+
+    public function store (Request $request){
+        $novo_habito = $request->all();
+        Habito::create($novo_habito);
+
+        return redirect('habitos');
+    }
 }

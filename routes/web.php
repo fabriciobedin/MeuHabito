@@ -21,5 +21,5 @@ Route::get('teste', function () {
 });
 
 Route::get('habitos', 'HabitosController@index');
-
 Route::get('habitos/create', 'HabitosController@create');
+Route::post('habitos/store', 'HabitosController@store');

@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Novo Hábito</h1>
 
-        {!! Form::open() !!}
+        {!! Form::open(['url' => 'habitos/store']) !!}
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}
             {!! Form::text('nome', null,['class' =>'form-control']) !!}
@@ -27,10 +27,13 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('tp_inicio_ctrl', 'Data:') !!}
-            {!! Form::date('tp_inicio_ctrl',
+            {!! Form::label('dt_inicio_ctrl', 'Data:') !!}
+            {!! Form::text('dt_inicio_ctrl',
                         '2017-05-20 00:00:00',
                          ['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::submit('Criar Hábito', ['class' =>'btn btn-primary']) !!}
         </div>
 
 
