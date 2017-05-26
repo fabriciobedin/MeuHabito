@@ -4,6 +4,14 @@
     <div class="container">
         <h1>Novo Hábito</h1>
 
+        @if($errors->any())
+            <ul class="alert alert-danger">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}}</li>
+                @endforeach
+            </ul>
+        @endif
+
         {!! Form::open(['url' => 'habitos/store']) !!}
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}
@@ -35,8 +43,6 @@
         <div class="form-group">
             {!! Form::submit('Criar Hábito', ['class' =>'btn btn-primary']) !!}
         </div>
-
-
 
         {!! Form::close() !!}
     </div>

@@ -13,7 +13,7 @@ class HabitoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class HabitoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome' => 'required|min:5',
+            'descricao' => 'required',
+            'tp_habito' => 'required',
+            'dt_inicio_ctrl' => 'required',
+            'objetivo' => 'required|numeric'
         ];
     }
 }

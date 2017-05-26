@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Habito;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\HabitoRequest;
 
 class HabitosController extends Controller
 {
@@ -17,7 +18,7 @@ class HabitosController extends Controller
         return view ('habitos.create');
     }
 
-    public function store (Request $request){
+    public function store (HabitoRequest $request){
         $novo_habito = $request->all();
         Habito::create($novo_habito);
 
